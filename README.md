@@ -1,28 +1,37 @@
-# Pythonで学ぶ 基本統計量
+# Pythonで学ぶ データ構造と基本統計量
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tomnyancat/Studying-Statistics-Basic-Statistics01/blob/main/Pythonで学ぶ基本統計量.ipynb)
-
-本リポジトリは、**Jupyter Notebook**形式で**基本統計量**の概念と、それを**Python**で計算・理解するための行った学習の記錄です。
+本リポジトリは、Pythonのデータ分析ライブラリ**Pandas**および**NumPy**を使用し、データの構造（DataFrame）と基本統計量（平均、分散など）の計算、そしてその統計的な意味を学んだ記録です。
 
 ---
 
-## 扱っているトピック
+## 学習の目的と内容
 
-* 基本統計量
-* Pandas、NumPyを使った統計量の効率的な算出
-* データ分析の練習
+**「データ分析を始めるために必要な基礎知識」**の習得を目指しています。
+
+### 1. Pandasの基礎
+* **DataFrameの理解**: Pandasの主要なデータ構造であるDataFrameが、どのようにデータを管理しているか（2次元の表に見えるが、内部は列ごとの1次元データ）を把握。
+* **データ確認**: `df.head()`, `print(df)` など、データセットの確認方法。
+
+### 2. 基本統計量の計算と解釈
+* **代表値の計算**: 平均、中央値、最頻値をPandas/NumPyで計算し、その結果からデータの傾向（例：英語は数学に比べばらつきが少ない）を解釈。
+* **分散と標準偏差**: ばらつきを示す指標の計算と、それがデータ分析で何を意味するかの考察。
+
+### 3. NumPyとPandasの違い（重要）
+* **分散の定義**: NumPyの標本分散とPandasの不偏分散（推定）のデフォルト設定の違いを検証。
+* **自由度補正（ddof=1）**: 統計分析における**不偏分散**の重要性と、なぜ $n$ ではなく $n-1$ で割るのか（過小評価の補正）について学習。
 
 ---
 
-## 実行環境・必要なライブラリ
+## 使用技術とライブラリ
 
 * **言語**: Python 3.x
-* **主要ライブラリ**: `pandas`, `numpy`
+* **主要ライブラリ**: 
+    * `pandas`: DataFrameの操作と統計量の計算（不偏分散デフォルト）
+    * `numpy`: 数値計算と統計量の計算（標本分散デフォルト）
+    * `scipy.stats`: 最頻値など、NumPy/Pandasに不足する統計機能を補完
 
 ---
 
 ## 書いた人
 
 [TOM](https://github.com/tomnyancat)
-
-
